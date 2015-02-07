@@ -13,6 +13,7 @@
 		503C1B631A863E5500D64B98 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 503C1B621A863E5500D64B98 /* Images.xcassets */; };
 		503C1B661A863E5500D64B98 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 503C1B641A863E5500D64B98 /* LaunchScreen.xib */; };
 		503C1B721A863E5500D64B98 /* SwiftNewsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503C1B711A863E5500D64B98 /* SwiftNewsTests.swift */; };
+		503C1B7C1A863FB800D64B98 /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503C1B7B1A863FB800D64B98 /* DetailController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		503C1B6B1A863E5500D64B98 /* SwiftNewsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftNewsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		503C1B701A863E5500D64B98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		503C1B711A863E5500D64B98 /* SwiftNewsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftNewsTests.swift; sourceTree = "<group>"; };
+		503C1B7B1A863FB800D64B98 /* DetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				503C1B5B1A863E5500D64B98 /* AppDelegate.swift */,
 				503C1B5D1A863E5500D64B98 /* ViewController.swift */,
 				503C1B5F1A863E5500D64B98 /* Main.storyboard */,
+				503C1B7B1A863FB800D64B98 /* DetailController.swift */,
 				503C1B621A863E5500D64B98 /* Images.xcassets */,
 				503C1B641A863E5500D64B98 /* LaunchScreen.xib */,
 				503C1B591A863E5500D64B98 /* Supporting Files */,
@@ -213,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				503C1B5E1A863E5500D64B98 /* ViewController.swift in Sources */,
+				503C1B7C1A863FB800D64B98 /* DetailController.swift in Sources */,
 				503C1B5C1A863E5500D64B98 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

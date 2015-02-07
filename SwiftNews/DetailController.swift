@@ -6,4 +6,8 @@
 //  Copyright (c) 2015年 yasuzuki. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class DetailController: UIViewController {
+    
+}
