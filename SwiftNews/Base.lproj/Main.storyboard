@@ -26,7 +26,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="SwiftNews" id="djk-dZ-T3x">
-                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="X5y-gR-vOP"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="X5y-gR-vOP">
+                            <connections>
+                                <action selector="refresh:" destination="RrA-93-FIG" id="a9y-31-Lkf"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kmA-8P-eLh" userLabel="First Responder" sceneMemberID="firstResponder"/>

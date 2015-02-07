@@ -10,6 +10,17 @@ import UIKit
 
 class ViewController: UITableViewController {
 
+    let newsUrlString = "http://www.apple.com/"
+    
+    @IBAction func refresh(sender: AnyObject) {
+        var url = NSURL(string: newsUrlString)!
+        var task = NSURLSession.sharedSession().dataTaskWithURL(url, completionHandler: {
+            data, response, error in
+                println("done, length \(data.length)")
+        })
+        task.resume()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
