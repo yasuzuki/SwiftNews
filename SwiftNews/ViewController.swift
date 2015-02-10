@@ -9,14 +9,25 @@
 import UIKit
 
 class ViewController: UITableViewController {
+    let newsUrlString = "http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&q=http://rss.itmedia.co.jp/rss/2.0/news_bursts.xml&num=8"
+    var entries = NSArray()
 
-    let newsUrlString = "http://www.apple.com/"
     
     @IBAction func refresh(sender: AnyObject) {
         var url = NSURL(string: newsUrlString)!
         var task = NSURLSession.sharedSession().dataTaskWithURL(url, completionHandler: {
             data, response, error in
-                println("done, length \(data.length)")
+            var dict = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as NSDictionary
+            if var responseData = dict["responseData"] as? NSDictionary {
+                if var feed = responseData["feed"] as? NSDictionary {
+                    if var entries = feed["entries"] as? NSArray {
+                        self.entries = entries
+                    }
+                }
+            }
+            dispatch_async(dispatch_get_main_queue(), {
+                self.tableView.reloadData()
+            })
         })
         task.resume()
     }
@@ -49,13 +60,14 @@ class ViewController: UITableViewController {
     ]
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return iphones.count
+        return entries.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = UITableViewCell(style: UITableViewCellStyle.Value1, reuseIdentifier: "news")
-        cell.textLabel?.text = iphones[indexPath.row]
-        cell.detailTextLabel?.text = years[indexPath.row]
+        
+        var cell = tableView.dequeueReusableCellWithIdentifier("news") as UITableViewCell
+        var entry = entries[indexPath.row] as NSDictionary
+        cell.textLabel?.text = entry["title"] as? String
         return cell
     }
 
