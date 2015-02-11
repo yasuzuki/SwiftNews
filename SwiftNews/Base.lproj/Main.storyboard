@@ -53,23 +53,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q8a-yk-FNf">
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q8a-yk-FNf">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="q8a-yk-FNf" firstAttribute="leading" secondItem="XsC-uo-7HN" secondAttribute="leadingMargin" constant="-16" id="O7A-Si-Ani"/>
-                            <constraint firstItem="q8a-yk-FNf" firstAttribute="top" secondItem="XsC-uo-7HN" secondAttribute="topMargin" id="giP-OA-n1l"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="q8a-yk-FNf" secondAttribute="trailing" constant="-16" id="ha9-wk-fv4"/>
-                            <constraint firstItem="QEf-Ns-cNK" firstAttribute="top" secondItem="q8a-yk-FNf" secondAttribute="bottom" id="xSI-RT-gsR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="q8a-yk-FNf" secondAttribute="trailing" constant="-16" id="5gQ-yg-22F"/>
+                            <constraint firstItem="q8a-yk-FNf" firstAttribute="top" secondItem="XsC-uo-7HN" secondAttribute="topMargin" id="GiC-01-kkm"/>
+                            <constraint firstItem="q8a-yk-FNf" firstAttribute="leading" secondItem="XsC-uo-7HN" secondAttribute="leadingMargin" constant="-16" id="gVr-Tl-iJt"/>
+                            <constraint firstItem="q8a-yk-FNf" firstAttribute="bottom" secondItem="XsC-uo-7HN" secondAttribute="bottomMargin" id="r0d-03-960"/>
                         </constraints>
                     </view>
                     <toolbarItems>
-                        <barButtonItem title="Twitter" id="zZ3-17-MHa"/>
+                        <barButtonItem title="Twitter" id="zZ3-17-MHa">
+                            <connections>
+                                <action selector="twitter:" destination="3Ic-Zn-diO" id="M6L-R5-FFq"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="h7q-uH-fVB"/>
-                        <barButtonItem title="Facebook" id="JS6-ZR-uey"/>
+                        <barButtonItem title="Facebook" id="JS6-ZR-uey">
+                            <connections>
+                                <action selector="facebook:" destination="3Ic-Zn-diO" id="755-4E-Tq5"/>
+                            </connections>
+                        </barButtonItem>
                     </toolbarItems>
                     <connections>
                         <outlet property="webView" destination="q8a-yk-FNf" id="awn-HM-9GV"/>
