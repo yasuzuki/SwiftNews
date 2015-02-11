@@ -52,6 +52,13 @@ class ViewController: UITableViewController {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         performSegueWithIdentifier("detail", sender: entries[indexPath.row])
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "detail" {
+            var detailController = segue.destinationViewController as DetailController
+            detailController.entry = sender as NSDictionary
+        }
+    }
 
 
     override func didReceiveMemoryWarning() {

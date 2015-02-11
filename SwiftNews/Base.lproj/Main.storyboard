@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="8JO-tW-ySf">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--SwiftNews-->
@@ -51,8 +52,23 @@
                     <view key="view" contentMode="scaleToFill" id="XsC-uo-7HN">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q8a-yk-FNf">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="q8a-yk-FNf" firstAttribute="leading" secondItem="XsC-uo-7HN" secondAttribute="leadingMargin" constant="-16" id="O7A-Si-Ani"/>
+                            <constraint firstItem="q8a-yk-FNf" firstAttribute="top" secondItem="XsC-uo-7HN" secondAttribute="topMargin" id="giP-OA-n1l"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="q8a-yk-FNf" secondAttribute="trailing" constant="-16" id="ha9-wk-fv4"/>
+                            <constraint firstItem="QEf-Ns-cNK" firstAttribute="top" secondItem="q8a-yk-FNf" secondAttribute="bottom" id="xSI-RT-gsR"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="webView" destination="q8a-yk-FNf" id="awn-HM-9GV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fyx-lR-OQE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
