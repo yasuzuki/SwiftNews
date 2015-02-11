@@ -32,10 +32,31 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="3Ic-Zn-diO" kind="show" identifier="detail" id="aXT-vC-6Y9"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kmA-8P-eLh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="994" y="456"/>
+        </scene>
+        <!--Detail Controller-->
+        <scene sceneID="A3o-nX-Jdh">
+            <objects>
+                <viewController id="3Ic-Zn-diO" customClass="DetailController" customModule="SwiftNews" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Gvf-lM-yUk"/>
+                        <viewControllerLayoutGuide type="bottom" id="QEf-Ns-cNK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XsC-uo-7HN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fyx-lR-OQE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1691" y="456"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Nna-Yk-247">

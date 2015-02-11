@@ -48,6 +48,10 @@ class ViewController: UITableViewController {
         cell.textLabel?.text = entry["title"] as? String
         return cell
     }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        performSegueWithIdentifier("detail", sender: entries[indexPath.row])
+    }
 
 
     override func didReceiveMemoryWarning() {
