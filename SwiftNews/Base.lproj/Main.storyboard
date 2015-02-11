@@ -53,7 +53,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q8a-yk-FNf">
+                            <webView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q8a-yk-FNf">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
@@ -66,6 +66,11 @@
                             <constraint firstItem="QEf-Ns-cNK" firstAttribute="top" secondItem="q8a-yk-FNf" secondAttribute="bottom" id="xSI-RT-gsR"/>
                         </constraints>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem title="Twitter" id="zZ3-17-MHa"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="h7q-uH-fVB"/>
+                        <barButtonItem title="Facebook" id="JS6-ZR-uey"/>
+                    </toolbarItems>
                     <connections>
                         <outlet property="webView" destination="q8a-yk-FNf" id="awn-HM-9GV"/>
                     </connections>
@@ -77,11 +82,14 @@
         <!--Navigation Controller-->
         <scene sceneID="Nna-Yk-247">
             <objects>
-                <navigationController id="8JO-tW-ySf" sceneMemberID="viewController">
+                <navigationController toolbarHidden="NO" id="8JO-tW-ySf" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="BPr-ZE-nkH">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="e2c-Wm-mBp">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="RrA-93-FIG" kind="relationship" relationship="rootViewController" id="Exw-L9-Ahc"/>
                     </connections>
