@@ -7,9 +7,14 @@
 //
 
 import UIKit
+import Social
 
 class DetailController: UIViewController {
     @IBOutlet weak var webView: UIWebView!
+    @IBAction func twitter(sender: AnyObject) {
+    }
+    @IBAction func facebook(sender: AnyObject) {
+    }
     
     var entry = NSDictionary()
     
