@@ -14,6 +14,7 @@
 		503C1B661A863E5500D64B98 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 503C1B641A863E5500D64B98 /* LaunchScreen.xib */; };
 		503C1B721A863E5500D64B98 /* SwiftNewsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503C1B711A863E5500D64B98 /* SwiftNewsTests.swift */; };
 		503C1B7C1A863FB800D64B98 /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503C1B7B1A863FB800D64B98 /* DetailController.swift */; };
+		5043A9D81A8AFE3500FA0132 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5043A9D71A8AFE3500FA0132 /* Social.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		503C1B701A863E5500D64B98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		503C1B711A863E5500D64B98 /* SwiftNewsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftNewsTests.swift; sourceTree = "<group>"; };
 		503C1B7B1A863FB800D64B98 /* DetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
+		5043A9D71A8AFE3500FA0132 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5043A9D81A8AFE3500FA0132 /* Social.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +64,7 @@
 		503C1B4D1A863E5500D64B98 = {
 			isa = PBXGroup;
 			children = (
+				5043A9D71A8AFE3500FA0132 /* Social.framework */,
 				503C1B581A863E5500D64B98 /* SwiftNews */,
 				503C1B6E1A863E5500D64B98 /* SwiftNewsTests */,
 				503C1B571A863E5500D64B98 /* Products */,
@@ -409,6 +413,7 @@
 				503C1B771A863E5500D64B98 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		503C1B781A863E5500D64B98 /* Build configuration list for PBXNativeTarget "SwiftNewsTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +422,7 @@
 				503C1B7A1A863E5500D64B98 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
