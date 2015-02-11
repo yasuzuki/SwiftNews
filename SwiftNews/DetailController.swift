@@ -10,14 +10,23 @@ import UIKit
 import Social
 
 class DetailController: UIViewController {
+    var entry = NSDictionary()
+    
     @IBOutlet weak var webView: UIWebView!
     @IBAction func twitter(sender: AnyObject) {
+        if SLComposeViewController.isAvailableForServiceType(SLServiceTypeTwitter){
+            var controller = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
+            let link = entry["link"] as String
+            let url = NSURL(string: link)
+            controller.addURL(url)
+            let title = entry["title"] as String
+            controller.setInitialText(title)
+            presentViewController(controller, animated: true, completion: {})
+            
+        }
     }
     @IBAction func facebook(sender: AnyObject) {
     }
-    
-    var entry = NSDictionary()
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
